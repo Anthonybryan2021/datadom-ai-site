@@ -69,7 +69,7 @@ a {
 }
 
 .nav {
-  min-height: 84px;
+  min-height: 104px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,7 +83,7 @@ a {
 }
 
 .brand-logo {
-  height: clamp(38px, 4vw, 52px);
+  height: clamp(56px, 6vw, 76px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(15,93,115,0.12));
@@ -311,12 +311,15 @@ main li {
 }
 
 @media (max-width: 760px) {
+  .brand-logo {
+    height: clamp(52px, 12vw, 60px);
+  }
   .section {
     padding: 56px 0;
   }
 
   .nav {
-    padding: 14px 0;
+    padding: 16px 0;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -450,3 +453,4 @@ main li {
     filter: none !important;
   }
 }
+
