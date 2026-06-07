@@ -346,3 +346,107 @@ main li {
     font-size: clamp(2.2rem, 8.5vw, 3.25rem);
   }
 }
+
+.brand-wrap {
+  position: relative;
+}
+
+.brand-logo-intro {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(10px) scale(0.96);
+  filter: blur(10px) drop-shadow(0 0 0 rgba(15,93,115,0));
+  animation: datadomLogoReveal 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.brand-wrap::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  width: 92px;
+  height: 92px;
+  transform: translateY(-50%) scale(0.82);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 196, 120, 0.22) 0%, rgba(15, 93, 115, 0.16) 42%, rgba(15, 93, 115, 0) 74%);
+  filter: blur(10px);
+  opacity: 0;
+  animation: datadomGlowBloom 1.8s ease-out 0.1s forwards;
+  pointer-events: none;
+}
+
+.brand-wrap::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  width: 120px;
+  height: 1px;
+  transform: translateY(-50%) scaleX(0.2);
+  transform-origin: left center;
+  background: linear-gradient(90deg, rgba(255,196,120,0), rgba(255,196,120,0.8), rgba(79,152,163,0.75), rgba(79,152,163,0));
+  opacity: 0;
+  filter: blur(0.4px);
+  animation: datadomSignalSweep 1.25s ease-out 0.55s forwards;
+  pointer-events: none;
+}
+
+@keyframes datadomLogoReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+    filter: blur(10px) drop-shadow(0 0 0 rgba(15,93,115,0));
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0) scale(1.015);
+    filter: blur(1.5px) drop-shadow(0 12px 26px rgba(15,93,115,0.16));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0) drop-shadow(0 10px 20px rgba(15,93,115,0.12));
+  }
+}
+
+@keyframes datadomGlowBloom {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.82);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.04);
+  }
+  100% {
+    opacity: 0.72;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+@keyframes datadomSignalSweep {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(0.2);
+  }
+  35% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%) scaleX(1.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo-intro,
+  .brand-wrap::before,
+  .brand-wrap::after {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
