@@ -69,7 +69,7 @@ a {
 }
 
 .nav {
-  min-height: 104px;
+  min-height: 108px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,20 +79,22 @@ a {
 .brand-wrap {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 
 .brand-logo {
-  height: clamp(56px, 6vw, 76px);
+  height: clamp(62px, 6.5vw, 84px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(15,93,115,0.12));
 }
 
 .brand-text {
-  font-size: 1.08rem;
-  font-weight: 800;
-  letter-spacing: 0.01em;
+  line-height: 1;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
 }
 
 nav {
@@ -130,7 +132,7 @@ nav a:focus-visible {
   background: var(--primary-soft);
   color: var(--primary-dark);
   font-size: .88rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: .03em;
 }
 
@@ -155,7 +157,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.08rem;
+  font-size: 0.95rem;
 }
 
 p {
@@ -173,7 +175,7 @@ p {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 16px;
   margin-top: 28px;
 }
 
@@ -190,7 +192,7 @@ p {
   padding: 0 18px;
   border-radius: 999px;
   font-size: .96rem;
-  font-weight: 800;
+  font-weight: 700;
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -220,7 +222,7 @@ p {
 
 .text-link {
   color: var(--primary);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .text-link:hover {
@@ -312,7 +314,7 @@ main li {
 
 @media (max-width: 760px) {
   .brand-logo {
-    height: clamp(52px, 12vw, 60px);
+    height: clamp(54px, 13vw, 66px);
   }
   .section {
     padding: 56px 0;
@@ -453,4 +455,5 @@ main li {
     filter: none !important;
   }
 }
+
 
