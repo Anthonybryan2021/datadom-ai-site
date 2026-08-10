@@ -48,112 +48,13 @@
     <div class="container">
       <h1>Carreras en DataDom.ai</h1>
       <div class="section-intro">
-        <p>Buscamos talento local en República Dominicana para construir un servicio cercano, profesional y disciplinado para pymes. Todas las posiciones son híbridas y la aplicación se realiza directamente en esta página.</p>
-        <p class="small-note">Recepción inicial de solicitudes: felixcepeda@icloud.com. Recomendamos subir el CV en PDF.</p>
+        <p>En este momento no estamos recibiendo nuevas aplicaciones.</p>
+        <p class="small-note">Gracias por tu interés en formar parte de nuestro equipo; publicaremos futuras oportunidades directamente en esta página.</p>
       </div>
 
-      <section class="jobs-grid">
-        <article class="job-card" id="lider-comercial">
-          <h2>Líder Comercial y Cuentas</h2>
-          <p>Responsable de abrir oportunidades, dar seguimiento a prospectos, coordinar reuniones iniciales, presentar propuestas y mantener la relación con clientes activos.</p>
-          <div class="job-meta">
-            <span>Híbrido</span>
-            <span>República Dominicana</span>
-            <span>Tiempo completo</span>
-          </div>
-          <p><strong>Perfil ideal:</strong> experiencia en ventas B2B o gestión de cuentas, buena comunicación, organización y orientación al cliente.</p>
-          <p><strong>Ofrecemos:</strong> salario competitivo según experiencia y oportunidad real de crecimiento.</p>
-          <button class="apply-btn" type="button" onclick="setRole('Líder Comercial y Cuentas')">Aplicar ahora</button>
-        </article>
-
-        <article class="job-card" id="coordinador-operaciones">
-          <h2>Coordinador de Operaciones y Servicio</h2>
-          <p>Responsable de coordinar onboarding, contratos, entregables, seguimiento interno y relación operativa entre clientes, área comercial y soporte técnico.</p>
-          <div class="job-meta">
-            <span>Híbrido</span>
-            <span>República Dominicana</span>
-            <span>Tiempo completo</span>
-          </div>
-          <p><strong>Perfil ideal:</strong> experiencia en operaciones, servicio al cliente o coordinación administrativa, alto nivel de orden y buen manejo de herramientas digitales.</p>
-          <p><strong>Ofrecemos:</strong> salario competitivo según experiencia y desarrollo profesional.</p>
-          <button class="apply-btn" type="button" onclick="setRole('Coordinador de Operaciones y Servicio')">Aplicar ahora</button>
-        </article>
-
-        <article class="job-card" id="soporte-tecnico">
-          <h2>Soporte Técnico / Implementación</h2>
-          <p>Responsable de apoyar activaciones, configuraciones iniciales, soporte básico, documentación y escalamiento de casos al partner o proveedor correspondiente.</p>
-          <div class="job-meta">
-            <span>Híbrido</span>
-            <span>República Dominicana</span>
-            <span>Tiempo completo</span>
-          </div>
-          <p><strong>Perfil ideal:</strong> experiencia en soporte técnico, implementación o mesa de ayuda, capacidad para documentar y seguir procesos, y actitud proactiva.</p>
-          <p><strong>Ofrecemos:</strong> salario competitivo según experiencia y oportunidad de aprendizaje continuo.</p>
-          <button class="apply-btn" type="button" onclick="setRole('Soporte Técnico / Implementación')">Aplicar ahora</button>
-        </article>
-      </section>
-
-      <section class="apply-panel" id="formulario-aplicacion">
-        <h2>Formulario de aplicación</h2>
-        <p class="small-note">Este formulario está listo para recibir solicitudes y enviar la información al equipo de DataDom.</p>
-
-        <form action="https://api.staticforms.dev/submit" method="POST" enctype="multipart/form-data" class="form-grid">
-          <input type="hidden" name="apiKey" value="sf_cf6d2d4a3f2616442c4f6394">
-          <input type="hidden" name="subject" value="Nueva solicitud de talento - DataDom.ai">
-          <input type="hidden" name="redirectTo" value="https://datadom.ai/careers.html?applied=1">
-          <input type="hidden" name="replyTo" value="@">
-          <input type="hidden" name="honeypot" value="">
-
-          <div class="form-row">
-            <label for="name">Nombre completo</label>
-            <input id="name" name="name" type="text" placeholder="Tu nombre completo" required>
-          </div>
-
-          <div class="form-row">
-            <label for="email">Correo electrónico</label>
-            <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
-          </div>
-
-          <div class="form-row">
-            <label for="phone">Teléfono</label>
-            <input id="phone" name="phone" type="tel" placeholder="+1 809 000 0000" required>
-          </div>
-
-          <div class="form-row">
-            <label for="role">Cargo al que aplicas</label>
-            <select id="role" name="role" required>
-              <option value="">Selecciona un puesto</option>
-              <option value="Líder Comercial y Cuentas">Líder Comercial y Cuentas</option>
-              <option value="Coordinador de Operaciones y Servicio">Coordinador de Operaciones y Servicio</option>
-              <option value="Soporte Técnico / Implementación">Soporte Técnico / Implementación</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label for="resume">CV / Resumé (PDF recomendado)</label>
-            <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" required>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Mensaje breve</label>
-            <textarea id="message" name="message" placeholder="Cuéntanos brevemente por qué te interesa el puesto y tu experiencia relevante." required></textarea>
-          </div>
-
-          <button class="submit-btn" type="submit">Enviar aplicación</button>
-          <p class="inline-note">Las solicitudes serán revisadas inicialmente por el equipo fundador de DataDom. Canal temporal de recepción: felixcepeda@icloud.com.</p>
-        </form>
-      </section>
     </div>
   </main>
 
-  <script>
-    function setRole(role){
-      var select = document.getElementById('role');
-      if(select){ select.value = role; }
-      var panel = document.getElementById('formulario-aplicacion');
-      if(panel){ panel.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }
-  </script>
 </body>
 </html>
 
